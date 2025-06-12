@@ -4,7 +4,7 @@ const linkSnpFree = document.querySelectorAll(".project-link");
 
 
 
-imageCoverSnpFree.src = "/projects_assets/simple_notepad/snp_free/ic_cover.png";
+imageCoverSnpFree.src = "https://raw.githubusercontent.com/sahariyarahamad/sahariyarhost/refs/heads/main/my_project_store/assets/simple_note_project/snp_free/ic_snp_free.png";
 
 linkSnpFree.forEach(link => {
     link.addEventListener("click", () => {
