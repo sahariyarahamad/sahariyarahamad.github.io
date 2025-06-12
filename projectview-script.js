@@ -12,7 +12,7 @@ const whatsApp = "+8801618852884";
 
 // Dummy multiple project data with versions and DM links
 const projectData = {
-  caption: {
+  simple_note_pad: {
     lite: {
       title: "Simple NotePad App (Lite Version)",
       description: "Create and save note, easy to use",
