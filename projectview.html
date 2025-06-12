@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project View</title>
+  <link rel="stylesheet" href="projects-style.css" />
+  <link rel="stylesheet" href="projectview-css.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">My Project Store</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="projects.html">Projects</a>
+      <!--<a href="contact.html">Contact</a>-->
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- for project cover photo -->
+    <img class="project-cover-img" id="project-cover-img-id"
+        src="#" alt="COVER IMAGE">
+    <strong id="project-not-found-cover-txt"></strong>
+
+    <div class="div-project-info">
+
+      <!-- for project info -->
+      <h1 id="project-title">Loading Project...</h1>
+      <p id="project-description"></p>
+      <div class="project-card" id="div-project-feature-id">
+        <strong class="project-feature-text">Project features...</strong>
+        <p id="show-project-feature-p"></p>
+      </div>
+
+    </div>
+
+    <h4 id="project-ss-tag">Project Screen Shorts</h4>
+
+    <!--for all ss -->
+    <div class="project-all-ss-div">
+      <img id="project-ss-img" src="#" alt="SCREEN SHORT IMAGE">
+     </div>
+
+    <!-- for price -->
+     <div class="project-price-div">
+        <!-- <progress></progress> -->
+        <!-- total price -->
+        <strong style="font-size: 1.9rem; color:#000;">Price: </strong>
+        <strong id="project-discount-price"></strong>
+        <sub id="project-total-price"></sub>
+     </div>
+
+    <!-- for what you get -->
+    <h1 class="what-you-get" id="what-you-get-id"></h1> 
+
+    <div>
+      <a id="dm-button-telegram" href="#" class="btn dm-btn" target="_blank" rel="noopener noreferrer">💬 DM to Buy (TELEGRAM)</a> <br>
+      <a id="dm-button-gmail" href="#" class="btn dm-btn" target="_blank" rel="noopener noreferrer">💬 DM to Buy (MAIL)</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Sahariyar Ahamad. All rights reserved.
+  </footer>
+
+  <script src="projectview-script.js"></script>
+</body>
+
+</html>
