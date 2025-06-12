@@ -14,14 +14,14 @@ const whatsApp = "+8801618852884";
 const projectData = {
   caption: {
     lite: {
-      title: "Caption App (Lite Version)",
-      description: "Basic features to add and manage captions for social media.",
+      title: "Simple NotePad App (Lite Version)",
+      description: "Create and save note, easy to use",
       dmMsg: ""+customerFirstMsg+projectName+" app "+version+customerLastMsg,
       projectTotalPrice: "<del>$2</del>",
       projectDiscountPrice: "free" ,
       projectFreeDownloadLink: "/",
-      feature: "<br><br>Simple UI<br>Easy to use<br>Save option",
-      projectSS: "LINK",
+      feature: "<br><br>Simple UI<br>Easy to use<br>Save option<br>App icon<br>Save notes in device memory",
+      projectSS: "https://raw.githubusercontent.com/sahariyarahamad/sahariyarhost/refs/heads/main/my_project_store/assets/simple_note_project/snp_free/snp_free_mockup.png",
       whatYouGet: "You get source code for Android Studio"
     }
   }
