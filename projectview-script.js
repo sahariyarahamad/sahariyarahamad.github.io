@@ -17,33 +17,17 @@ const projectData = {
       title: "Caption App (Lite Version)",
       description: "Basic features to add and manage captions for social media.",
       dmMsg: ""+customerFirstMsg+projectName+" app "+version+customerLastMsg,
-      projectTotalPrice: "<del>$4</del>",
-      projectDiscountPrice: "Free" ,
+      projectTotalPrice: "<del>$2</del>",
+      projectDiscountPrice: "free" ,
+      projectFreeDownloadLink: "/",
       feature: "<br><br>Simple UI<br>Easy to use<br>Save option",
       projectSS: "LINK",
-      whatYouGet: "You get .apk & .abb file"
-    },
-    pro: {
-      title: "Caption App (Pro Version)",
-      description: "Includes AI-generated captions, favorites, and sharing options.",
-      dmMsg: ""+customerFirstMsg+projectName+" app "+version+customerLastMsg,
-      feature: "<br><br>Simple UI<br>Easy to use",
-      projectTotalPrice: "<del>$6</del>",
-      projectDiscountPrice: "$4" ,
-      projectSS: "LINK",
-      whatYouGet: "You get .apk & .abb file"
-    },
-    gold: {
-      title: "Caption App (Gold Version)",
-      description: "Premium caption packs, offline access, and commercial license.",
-      dmMsg: ""+customerFirstMsg+projectName+" app "+version+customerLastMsg,
-      feature: "<br><br>Simple UI<br>Easy to use",
-      projectTotalPrice: "<del>$7</del>",
-      projectDiscountPrice: "$6" ,
-      projectSS: "LINK",
-      whatYouGet: "You get .apk & .abb file"
+      whatYouGet: "You get source code for Android Studio"
     }
   }
+
+
+
 };
 
 // Render project info
@@ -90,10 +74,7 @@ if (
 
   const imgUrlEncode = encodeURIComponent(imgUrl);
   //set cover 
-  //if (projectCoverImgId && imgUrl) {
-    projectCoverImgId.src = imgUrl;
-    //console.log("[DEBUG] imgUrl", imgUrl);
-  //}
+  projectCoverImgId.src = imgUrl;
 
   //for tg
   dmButtonTelegram.href = linkTg;
@@ -108,6 +89,18 @@ if (
   showProjectFeature.innerHTML = data.feature;
   projectTotalPrice.innerHTML = data.projectTotalPrice;
   projectDiscountPrice.innerHTML = data.projectDiscountPrice;
+
+  // set for project discount price 
+  if(data.projectDiscountPrice.toLowerCase() === "free") {
+    dmButtonTelegram.textContent = "Download Source Code";
+    // set link
+    dmButtonTelegram.href = ""+data.projectFreeDownloadLink;
+    // gone other btns
+    dmButtonGmail.style.display = "none";
+   dmButtonWhatsapp.style.display = "none";
+   projectDiscountPrice.innerHTML = "Free";
+  }
+
   // set ss
   document.getElementById("project-ss-img").src = data.projectSS;
   whatYouGet.innerHTML = data.whatYouGet;
