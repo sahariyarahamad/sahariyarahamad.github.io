@@ -7,8 +7,8 @@ const version = urlParams.get('version');
 const imgUrl = urlParams.get('img');
 const customerFirstMsg = "Hello i'm from your project store and i want to buy ";
 const customerLastMsg = " version. Please reply me as soon as possible";
-const gmail = "sahariyarahamed0@gmail.com";
 const whatsApp = "+8801618852884";
+const messenger = "https://m.me/softahama"
 
 // Dummy multiple project data with versions and DM links
 const projectData = {
@@ -34,8 +34,8 @@ const projectData = {
 const titleElement = document.getElementById("project-title");
 const descElement = document.getElementById("project-description");
 const dmButtonTelegram = document.getElementById("dm-button-telegram");
-const dmButtonGmail = document.getElementById("dm-button-gmail");
 const dmButtonWhatsapp = document.getElementById("dm-button-whatsapp");
+const dmButtonMessenger = document.getElementById("dm-button-messenger");
 // for project info div
 const projectInfoDiv = document.getElementById("div-project-feature-id");
 // for show project feature p
@@ -63,11 +63,12 @@ if (
   const encodeMsg = encodeURIComponent(data.dmMsg);
   const linkTg = `https://t.me/sahariyarahamad?text=${encodeMsg}`;
 
-  // for gmail 
-  const linkGmail = 'mailto:'+gmail+'?subject=Want to buy '+projectName+` app&body=${encodeMsg} `;
-
   // for wa
   const linkWhatsApp = `https://wa.me/${whatsApp}?text=${encodeMsg}`;
+
+  // for messenger
+  document.getElementById("messenger-msg-note").innerHTML = "⚠️ NOTE: <br><br>IF DM BY MESSENGER THEN PLEASE COPY BELOW TEXT AND PAST MESSENGER TEXT BOX<br><code><pre>"+ data.dmMsg +"</pre></code><br>";
+  const linkMessenger = ""+messenger;
 
   titleElement.textContent = data.title;
   descElement.textContent = data.description;
@@ -79,9 +80,9 @@ if (
   //for tg
   dmButtonTelegram.href = linkTg;
   dmButtonTelegram.style.display = "inline-block";
-  // for gmail
-  dmButtonGmail.href = linkGmail;
-  dmButtonGmail.style.display = "inline-block";
+  // for mess
+  dmButtonMessenger.href = linkMessenger;
+  dmButtonMessenger.style.display = "inline-block";
 
   //for wa
   dmButtonWhatsapp.href = linkWhatsApp;
@@ -96,8 +97,9 @@ if (
     // set link
     dmButtonTelegram.href = ""+data.projectFreeDownloadLink;
     // gone other btns
-    dmButtonGmail.style.display = "none";
    dmButtonWhatsapp.style.display = "none";
+   dmButtonMessenger.style.display = "none";
+   document.getElementById("messenger-msg-note").style.display = "none";
    projectDiscountPrice.innerHTML = "Free";
   }
 
@@ -116,8 +118,7 @@ if (
   document.getElementById("project-ss-img").style.display = "none"
   document.getElementById("project-not-found-cover-txt").innerHTML = "404";
   projectCoverImgId.style.display = "none";
-  dmButtonGmail.style.display = "none";
-   dmButtonWhatsapp.style.display = "none";
+  dmButtonWhatsapp.style.display = "none";
   document.getElementById("project-ss-tag").style.display = "none";
   whatYouGet.style.display = "none";
 }
