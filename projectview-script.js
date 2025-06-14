@@ -19,7 +19,7 @@ const projectData = {
       dmMsg: ""+customerFirstMsg+projectName+" app "+version+customerLastMsg,
       projectTotalPrice: "<del>$2</del>",
       projectDiscountPrice: "free" ,
-      projectFreeDownloadLink: "/",
+      projectFreeDownloadLink: "https://drive.google.com/uc?export=download&id=1AX6Q8GiPfD_UiG61BoO1jFNOdWWjd9jW",
       feature: "<br><br>Simple UI<br>Easy to use<br>Save option<br>App icon<br>Save notes in device memory",
       projectSS: "https://raw.githubusercontent.com/sahariyarahamad/sahariyarhost/refs/heads/main/my_project_store/assets/simple_note_project/snp_free/snp_free_mockup.png",
       whatYouGet: "You get source code for Android Studio"
