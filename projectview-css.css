@@ -1,5 +1,9 @@
 /* project-view-style.css */
 
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
 /* for project cover image */
 .project-cover-img{
   border-radius: 5px;
