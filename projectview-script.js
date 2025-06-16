@@ -24,6 +24,20 @@ const projectData = {
       projectSS: "https://raw.githubusercontent.com/sahariyarahamad/sahariyarhost/refs/heads/main/my_project_store/assets/simple_note_project/snp_free/snp_free_mockup.png",
       whatYouGet: "You get source code for Android Studio"
     }
+  },
+
+  easy_note: {
+    lite: {
+      title: "Easy Note App (Lite Version)",
+      description: "Save note for your daily life",
+      dmMsg: ""+customerFirstMsg+projectName+" app "+version+customerLastMsg,
+      projectTotalPrice: "<del>$7</del>",
+      projectDiscountPrice: "$5" ,
+      projectFreeDownloadLink: "/",
+      feature: "<br><br>Simple UI<br>Easy to use<br>Create Note<br>App icon<br>View note<br>Edit or Update note<br>Delete note",
+      projectSS: "https://raw.githubusercontent.com/sahariyarahamad/sahariyarhost/refs/heads/main/my_project_store/assets/easy_note_project/enp_lite/easy_note_mockup.jpg",
+      whatYouGet: "You get source code for Android Studio"
+    }
   }
 
 
@@ -119,6 +133,7 @@ if (
   document.getElementById("project-not-found-cover-txt").innerHTML = "404";
   projectCoverImgId.style.display = "none";
   dmButtonWhatsapp.style.display = "none";
+  dmButtonMessenger.style.display = "none";
   document.getElementById("project-ss-tag").style.display = "none";
   whatYouGet.style.display = "none";
 }
