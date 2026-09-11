@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "#",
+    "name": "Alnova News",
+    "category": "Android",
+    "date": "2026-01-15",
+    "short": "A clean Android news application focused on a simple reading experience.",
+    "description": "A sample project entry. Replace this information with the real project details.",
+    "status": "Completed",
+    "tech": [
+      "Java",
+      "XML",
+      "Firebase",
+      "Jsoup"
+    ],
+    "featured": true,
+    "screenshots": [
+      "https://placehold.co/1200x750/png?text=Alnova+News+01",
+      "https://placehold.co/1200x750/png?text=Alnova+News+02",
+      "https://placehold.co/1200x750/png?text=Alnova+News+03"
+    ]
+  }
+]

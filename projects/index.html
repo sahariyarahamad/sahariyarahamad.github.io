@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Explore apps, websites, libraries and other projects by Sahariyar Ahamad."
+    >
+
+    <title>Projects — Sahariyar Ahamad</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Theme -->
+    <script defer src="../assets/js/theme.js"></script>
+
+
+    <!--<style>
+
+        /* =====================================================
+           PROJECT STORE
+           ===================================================== */
+
+        .projects-store {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+
+        /* =====================================================
+           PROJECT CARD
+           ===================================================== */
+
+        .store-card {
+            display: flex;
+            flex-direction: column;
+
+            overflow: hidden;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+
+            box-shadow:
+                0 8px 35px rgba(15, 23, 42, .04);
+
+            transition: .25s ease;
+        }
+
+        .store-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+
+        /* =====================================================
+           PROJECT IMAGE
+           ===================================================== */
+
+        .store-image {
+            display: block;
+
+            aspect-ratio: 16 / 10;
+
+            overflow: hidden;
+
+            background: var(--surface2);
+        }
+
+        .store-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .4s ease;
+        }
+
+        .store-card:hover .store-image img {
+            transform: scale(1.035);
+        }
+
+
+        /* =====================================================
+           CARD BODY
+           ===================================================== */
+
+        .store-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+            padding: 23px;
+        }
+
+
+        /* =====================================================
+           META
+           ===================================================== */
+
+        .store-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 8px;
+        }
+
+        .store-type {
+            display: inline-flex;
+            align-items: center;
+
+            width: fit-content;
+
+            padding: 5px 9px;
+
+            border-radius: 8px;
+
+            font-size: .68rem;
+            font-weight: 900;
+
+            letter-spacing: .08em;
+        }
+
+
+        /* FREE */
+
+        .store-type.free {
+            color: #16a34a;
+
+            background: rgba(34, 197, 94, .10);
+
+            border: 1px solid rgba(34, 197, 94, .20);
+        }
+
+
+        /* PAID */
+
+        .store-type.paid {
+            color: #d97706;
+
+            background: rgba(245, 158, 11, .10);
+
+            border: 1px solid rgba(245, 158, 11, .20);
+        }
+
+
+        .store-platform {
+            color: var(--muted);
+
+            font-size: .72rem;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           TITLE
+           ===================================================== */
+
+        .store-body h2 {
+            margin: 6px 0 7px;
+
+            font-size: 1.35rem;
+            line-height: 1.25;
+
+            letter-spacing: -.025em;
+        }
+
+
+        /* =====================================================
+           DESCRIPTION
+           ===================================================== */
+
+        .store-description {
+            margin: 0;
+
+            color: var(--muted);
+
+            font-size: .92rem;
+        }
+
+
+        /* =====================================================
+           TAGS
+           ===================================================== */
+
+        .store-tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 6px;
+
+            margin: 18px 0 20px;
+        }
+
+        .store-tags span {
+            padding: 4px 8px;
+
+            background: var(--surface2);
+
+            border: 1px solid var(--border);
+            border-radius: 7px;
+
+            color: var(--muted);
+
+            font-size: .70rem;
+        }
+
+
+        /* =====================================================
+           ACTION BUTTONS
+           ===================================================== */
+
+        .store-actions {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 9px;
+
+            margin-top: auto;
+        }
+
+        .store-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 42px;
+
+            padding: 9px 12px;
+
+            border: 1px solid var(--border);
+            border-radius: 12px;
+
+            font-size: .78rem;
+            font-weight: 800;
+
+            text-align: center;
+
+            transition: .2s ease;
+        }
+
+        .store-btn:hover {
+            transform: translateY(-1px);
+
+            border-color: var(--accent);
+        }
+
+        .store-btn.primary {
+            background: var(--text);
+            color: var(--bg);
+
+            border-color: var(--text);
+        }
+
+        .store-btn.secondary {
+            background: var(--surface);
+            color: var(--text);
+        }
+
+
+        /* =====================================================
+           PAID PRICE / INFO
+           ===================================================== */
+
+        .store-price {
+            margin: 0 0 18px;
+
+            color: var(--text);
+
+            font-size: .88rem;
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 950px) {
+
+            .projects-store {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .projects-store {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>-->
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="container nav-wrap">
+
+        <a class="brand" href="../">
+            Sahariyar Ahamad<span>.</span>
+        </a>
+
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+        >
+            ☰
+        </button>
+
+
+        <nav
+            id="mainNav"
+            class="main-nav"
+        >
+
+            <a href="../#about">
+                About
+            </a>
+
+            <a
+                class="active"
+                href="./"
+            >
+                Projects
+            </a>
+
+            <a href="../blogs/">
+                Blogs
+            </a>
+
+            <a href="../docs/">
+                Docs
+            </a>
+
+            <a href="../#contact">
+                Contact
+            </a>
+
+
+            <button
+                class="theme-btn"
+                id="themeBtn"
+                type="button"
+            >
+                ◐
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+
+<main class="listing-page container">
+
+
+    <!-- PAGE INTRO -->
+
+    <div class="page-intro">
+
+        <p class="eyebrow">
+            Project Store
+        </p>
+
+        <h1>
+            Projects
+        </h1>
+
+        <p>
+            Apps, websites, libraries, experiments and other
+            things I've built and shared.
+        </p>
+
+    </div>
+
+<!-- NOTE: REMOVE THIS TO BOTTOM COMMENT FOR SHOW PROJECTS
+
+    <!- =====================================================
+         PROJECT STORE
+         ===================================================== ->
+
+    <div class="projects-store">
+
+        
+        <!- =================================================
+             ALNOVA NEWS
+             FREE PROJECT
+             ================================================= ->
+
+        <article class="store-card">
+
+
+            <a
+                class="store-image"
+                href="./alnova-news/"
+            >
+
+                <img
+                    src="../assets/images/projects/alnova-news.png"
+                    alt="Alnova News"
+                    onerror="this.src='https://placehold.co/1200x750/png?text=Alnova+News'"
+                >
+
+            </a>
+
+
+            <div class="store-body">
+
+
+                <div class="store-meta">
+
+                    <span class="store-type free">
+                        FREE
+                    </span>
+
+                    <span class="store-platform">
+                        Android
+                    </span>
+
+                </div>
+
+
+                <h2>
+                    Alnova News
+                </h2>
+
+
+                <p class="store-description">
+                    A clean Android news application focused
+                    on a simple and comfortable reading experience.
+                </p>
+
+
+                <div class="store-tags">
+
+                    <span>Java</span>
+                    <span>XML</span>
+                    <span>Firebase</span>
+                    <span>Jsoup</span>
+
+                </div>
+
+
+                <div class="store-actions">
+
+
+                    <!- Source Code ->
+
+                    <a
+                        class="store-btn primary"
+                        href="./alnova-news/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!- =================================================
+             PAID PROJECT TEMPLATE
+             
+             COPY THIS ARTICLE TO ADD A NEW PAID PROJECT.
+             ================================================= ->
+
+        <article class="store-card">
+
+
+            <a
+                class="store-image"
+                href="./example-paid-project/"
+            >
+
+                <img
+                    src="../assets/images/projects/example-paid-project.png"
+                    alt="Example Paid Project"
+                    onerror="this.src='https://placehold.co/1200x750/png?text=Paid+Project'"
+                >
+
+            </a>
+
+
+            <div class="store-body">
+
+
+                <div class="store-meta">
+
+                    <span class="store-type paid">
+                        PAID
+                    </span>
+
+                    <span class="store-platform">
+                        Android
+                    </span>
+
+                </div>
+
+
+                <h2>
+                    Example Paid Project
+                </h2>
+
+
+                <p class="store-description">
+                    Premium Android project with source code
+                    and advanced features.
+                </p>
+
+
+                <div class="store-tags">
+
+                    <span>Java</span>
+                    <span>XML</span>
+                    <span>Firebase</span>
+
+                </div>
+
+
+                <p class="store-price">
+                    Contact for price
+                </p>
+
+
+                <div class="store-actions">
+
+
+                    <a
+                        class="store-btn primary"
+                        href="../#contact"
+                    >
+                        View Details
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!- =================================================
+             NEW PROJECTS GO HERE
+             ================================================= ->
+
+
+    </div>
+
+ ========================== REMOVE THIS COMMENT TO HERE ===================================================================-->
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container footer-inner">
+
+        <span>
+            © 2026 Sahariyar Ahamad
+        </span>
+
+        <a href="../">
+            Home
+        </a>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     MOBILE MENU
+     ========================================================= -->
+
+<script>
+
+    document
+        .getElementById("menuBtn")
+        ?.addEventListener("click", () => {
+
+            document
+                .getElementById("mainNav")
+                ?.classList.toggle("open");
+
+        });
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sahariyar Ahamad's blogs and notes.">
+  <title>Blogs — Sahariyar Ahamad</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+  <script defer src="../assets/js/theme.js"></script>
+  <script defer src="../assets/js/listing.js"></script>
+</head>
+<body>
+<header class="site-header"><div class="container nav-wrap">
+  <a class="brand" href="../">Sahariyar Ahamad<span>.</span></a>
+  <button class="menu-btn" id="menuBtn">☰</button>
+  <nav id="mainNav" class="main-nav">
+    <a href="../#about">About</a><a href="../projects/">Projects</a><a class="active" href="./">Blogs</a><a href="../docs/">Docs</a><a href="../#contact">Contact</a>
+    <button class="theme-btn" id="themeBtn" type="button">◐</button>
+  </nav>
+</div></header>
+
+<main class="listing-page container">
+  <div class="page-intro"><p class="eyebrow">Thoughts & notes</p><h1>Blogs</h1><p>Learning notes, development stories, guides and useful ideas.</p></div>
+  <div class="toolbar">
+    <input id="searchInput" class="search" type="search" placeholder="Search blogs…">
+    <select id="categoryFilter" class="select"><option value="all">All categories</option></select>
+  </div>
+  <div id="blogGrid" class="blog-grid"></div>
+  <p id="emptyState" class="empty hidden">No blogs found.</p>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><span>© 2026 Sahariyar Ahamad</span><a href="../">Home</a></div></footer>
+</body>
+</html>
