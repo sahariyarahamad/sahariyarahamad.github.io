@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson — App Development with Java</title>
+<link rel="stylesheet" href="../../../assets/css/style.css"><script defer src="../../../assets/js/theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&display=swap">
+<style>
+
+.side > .section {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+.side > .section + .section {
+  margin-top: 0 !important;
+}
+.side .list {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.side .list li {
+  margin: 0 !important;
+}
+
+.page{padding:35px 0 80px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px}.head{padding:22px 0}.head h1{margin:0 0 8px;font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.04em}.head p{margin:0;color:var(--muted)}.video{background:#000;border-radius:16px;overflow:hidden;aspect-ratio:16/9}.video iframe,.video video{width:100%;height:100%;border:0;display:block}.actions{display:flex;justify-content:space-between;gap:10px;margin-top:15px}.action{padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-weight:800;font-size:.78rem}.action.primary{background:var(--text);color:var(--bg)}.side{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;position:sticky;top:20px;height:max-content}.side h2{font-size:1rem;padding:18px;margin:0;border-bottom:1px solid var(--border)}.section h3{font-size:.8rem;margin:0;padding:13px 16px;background:var(--surface2)}.list{list-style:none;margin:0;padding:0}.list li{border-top:1px solid var(--border)}.list a{display:flex;justify-content:space-between;gap:8px;padding:11px 15px;font-size:.76rem;color:var(--muted)}.list li.active a{color:var(--text);font-weight:800;background:rgba(127,127,127,.08)}.content{margin-top:25px;padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:16px}.content p,.content li{color:var(--muted);line-height:1.75}@media(max-width:900px){.layout{grid-template-columns:1fr}.side{position:static}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../../../">Sahariyar Ahamad<span>.</span></a><button class="menu-btn" id="menuBtn">☰</button><nav id="mainNav" class="main-nav"><a href="../../../#about">About</a><a href="../../../projects/">Projects</a><a href="../../../blogs/">Blogs</a><a href="../../../docs/">Docs</a><a class="active" href="../../">Courses</a><a href="../../../#contact">Contact</a><button class="theme-btn" id="themeBtn">◐</button></nav></div></header>
+<main class="container page"><div class="layout"><div>
+<div class="head"><p class="eyebrow">App Development with Java</p><h1 id="title">Introduction to the Course</h1><p id="info">Lesson 01 · 08:20</p></div>
+<div class="video">
+<!-- YouTube: replace VIDEO_ID -->
+<iframe id="youtubePlayer" src="https://www.youtube.com/embed/VIDEO_ID_01" title="Course video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<!-- Self hosted alternative:
+<video controls><source src="./videos/lesson-01.mp4" type="video/mp4"></video>
+-->
+</div>
+<div class="actions">
+  <a class="action" href="./index.html">
+    ← Course Overview
+  </a>
+  <a class="action primary" id="next" href="?lesson=02">
+    Next Lesson →
+  </a>
+</div>
+
+<article class="content">
+  <h2>
+    Lesson Notes
+  </h2>
+  <p>
+    NO NOTES AVAILABLE
+  </p>
+  <!--<h2>
+    Resources
+  </h2>
+
+  <ul>
+    <li>
+      Source code / project files
+    </li>
+    <li>
+      Practice assignment
+    </li>
+    <li>
+      Additional documentation
+    </li>
+  </ul>-->
+</article>
+
+</div> 
+
+<aside class="side">
+  <h2>
+    Course Curriculum
+  </h2>
+  <div class="section">
+    <h3>
+      Section 01 — Getting Started
+    </h3>
+    <ul class="list">
+      <li class="active">
+        <a href="?lesson=01">
+          <span>
+            Introduction to the Microsoft Power Point
+          </span>
+          <small>
+            17:43
+          </small>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+</div>
+
+</main>
+
+
+<footer class="site-footer"><div class="container footer-inner"><span>© 2026 Sahariyar Ahamad</span><a href="./">Course</a></div></footer>
+<script>
+document.getElementById("menuBtn")?.addEventListener("click",()=>document.getElementById("mainNav")?.classList.toggle("open"));
+
+const lessons={
+  "01":["Introduction to the Microsoft Power Point","Lesson 01 · 17:43"]
+  /*"02":["Android Studio Setup","Lesson 02 · 14:35"],
+  "03":["First Android Project","Lesson 03 · 18:10"],
+  "04":["Variables and Data Types","Lesson 04 · 22:10"],
+  "05":["Conditions and Loops","Lesson 05 · 25:40"],
+  "06":["Methods and Classes","Lesson 06 · 29:15"],
+  "07":["OOP Fundamentals","Lesson 07 · 31:20"],
+  "08":["XML Layouts","Lesson 08 · 24:00"],
+  "09":["TextView, Button and EditText","Lesson 09 · 21:30"],
+  "10":["RecyclerView","Lesson 10 · 32:40"],
+  "11":["Material UI","Lesson 11 · 27:10"]*/
+};
+
+// Put each YouTube video ID here. Example: https://youtu.be/AbCdEf12345 -> AbCdEf12345
+const videoIds={
+  "01":"_i0oRzRmxDg",
+  /*"02":"VIDEO_ID_02",
+  "03":"VIDEO_ID_03",
+  "04":"2HaM6PpeTk8",
+  "05":"VIDEO_ID_05",
+  "06":"VIDEO_ID_06",
+  "07":"VIDEO_ID_07",
+  "08":"VIDEO_ID_08",
+  "09":"VIDEO_ID_09",
+  "10":"VIDEO_ID_10",
+  "11":"VIDEO_ID_11"*/
+};
+
+const id=new URLSearchParams(location.search).get("lesson")||"01";
+const titleEl=document.getElementById("title");
+const infoEl=document.getElementById("info");
+const player=document.getElementById("youtubePlayer");
+const next=document.getElementById("next");
+
+if(lessons[id]){
+  titleEl.textContent=lessons[id][0];
+  infoEl.textContent=lessons[id][1];
+}
+
+// Change the video whenever the selected lesson changes.
+const videoId=videoIds[id];
+if(player && videoId && !videoId.startsWith("VIDEO_ID_")){
+  player.src="https://www.youtube.com/embed/"+videoId;
+}
+
+const n=String(Number(id)+1).padStart(2,"0");
+if(lessons[n]){
+  next.href="?lesson="+n;
+}else{
+  next.textContent="Course Complete ✓";
+  next.removeAttribute("href");
+  next.style.pointerEvents="none";
+  next.style.opacity=".7";
+}
+
+// Highlight the currently selected lesson in the sidebar.
+document.querySelectorAll(".list li").forEach(li=>li.classList.remove("active"));
+const activeLink=document.querySelector('.list a[href="?lesson='+id+'"]');
+activeLink?.closest("li")?.classList.add("active");
+</script>
+</body></html>

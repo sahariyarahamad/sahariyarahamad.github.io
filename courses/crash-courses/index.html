@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Crash Courses — Sahariyar Ahamad</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script defer src="../../assets/js/theme.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&display=swap">
+    <style>
+        .head {
+            padding: 75px 0 40px
+        }
+
+        .head h1 {
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            margin: 0 0 12px;
+            letter-spacing: -.05em
+        }
+
+        .head p {
+            color: var(--muted);
+            max-width: 700px
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            padding-bottom: 110px
+        }
+
+        .course {
+            overflow: hidden;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: .25s
+        }
+
+        .course:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow)
+        }
+
+        .cover {
+            display: block;
+            aspect-ratio: 16/9;
+            background: var(--surface2);
+            overflow: hidden
+        }
+
+        .cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .body {
+            padding: 22px
+        }
+
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px
+        }
+
+        .badge {
+            font-size: .67rem;
+            font-weight: 900;
+            letter-spacing: .07em;
+            padding: 5px 8px;
+            border-radius: 8px
+        }
+
+        .free {
+            background: rgba(34, 197, 94, .1);
+            color: #16a34a
+        }
+
+        .paid {
+            background: rgba(245, 158, 11, .1);
+            color: #d97706
+        }
+
+        .level {
+            color: var(--muted);
+            font-size: .72rem;
+            font-weight: 700
+        }
+
+        .course h2 {
+            margin: 0 0 8px;
+            font-size: 1.3rem
+        }
+
+        .course p {
+            color: var(--muted);
+            font-size: .9rem
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 16px 0 20px
+        }
+
+        .tags span {
+            padding: 4px 8px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            font-size: .69rem;
+            color: var(--muted)
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 11px;
+            border-radius: 11px;
+            background: var(--text);
+            color: var(--bg);
+            font-size: .8rem;
+            font-weight: 800
+        }
+
+        @media(max-width:900px) {
+            .courses {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(max-width:580px) {
+            .courses {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-wrap"><a class="brand" href="../../">Sahariyar Ahamad<span>.</span></a><button
+                class="menu-btn" id="menuBtn">☰</button>
+            <nav id="mainNav" class="main-nav"><a href="../../#about">About</a><a href="../../projects/">Projects</a><a
+                    href="../../blogs/">Blogs</a><a href="../../docs/">Docs</a><a class="active"
+                    href="../">Courses</a><a href="../../#contact">Contact</a><button class="theme-btn"
+                    id="themeBtn">◐</button></nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="head">
+            <p class="eyebrow">Courses / Crash Courses</p>
+            <h1>Crash Course</h1>
+        </section>
+
+        <section class="courses">
+            <article class="course">
+                <a class="cover" href="./app-development-with-java/">
+                    <img src="../../assets/images/courses/crash-courses/ms-powerpoint.png" alt="Crash course MS PowerPoint"
+                        onerror="this.src='https://placehold.co/1200x675/png?text=MS+PowerPoint+Crash+Course'">
+                </a>
+                <div class="body">
+                    <div class="meta">
+                        <span class="badge free">FREE</span>
+                        <span class="level">Beginner → Advanced</span>
+                    </div>
+                    <h2>Microsoft Power Point</h2>
+                    <p>Learn MS PowerPoint in quick and short course.</p>
+                    <div class="tags">
+                        <span>Free</span>
+                        <span>Office</span>
+                        <span>MS Office</span>
+                        <span>Power Point</span>
+                    </div>
+                    <a class="btn" href="./crash-course-ms-power-point/">View Course</a>
+                </div>
+            </article>
+            <!-- COPY THE ARTICLE ABOVE TO ADD MORE COURSES -->
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner"><span>© 2026 Sahariyar Ahamad</span><a href="../">All Courses</a></div>
+    </footer>
+    <script>document.getElementById("menuBtn")?.addEventListener("click", () => document.getElementById("mainNav")?.classList.toggle("open"));</script>
+</body>
+
+</html>

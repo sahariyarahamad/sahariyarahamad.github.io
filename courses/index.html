@@ -1,23 +1,186 @@
 <!doctype html>
 <html lang="en" data-theme="system">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Courses — Sahariyar Ahamad</title>
-<link rel="stylesheet" href="../assets/css/style.css">
-<script defer src="../assets/js/theme.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/courses.css">
-</head>
-<body class="course-page">
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../">Sahariyar<span>.</span></a><button class="menu-btn" id="menuBtn">☰</button><nav id="mainNav" class="main-nav"><a href="../#about">About</a><a href="../projects/">Projects</a><a href="../blogs/">Blogs</a><a href="../docs/">Docs</a><a class="active" href="./">Courses</a><a href="../#contact">Contact</a><button class="theme-btn" id="themeBtn">◐</button></nav></div></header>
-<main class="container"><section class="hero"><p class="eyebrow">Learning platform</p><h1>Courses</h1><p>Practical courses for programming, Android development and technology skills.</p></section>
-<section class="grid">
-<a class="card" href="./app-development/"><div class="icon">📱</div><h2>App Development</h2><p>Android development with Java, Kotlin, XML, APIs, Firebase and real projects.</p><span class="count">1 course</span></a>
-<a class="card" href="./programming/"><div class="icon">💻</div><h2>Programming</h2><p>Programming fundamentals, problem solving and DSA.</p><span class="count">0 courses</span></a>
-<a class="card" href="./web-development/"><div class="icon">🌐</div><h2>Web Development</h2><p>Modern web development from frontend to backend.</p><span class="count">0 courses</span></a>
-</section></main>
-<footer class="site-footer"><div class="container footer-inner"><span>© 2026 Sahariyar Ahamad</span><a href="../">Home</a></div></footer>
 
-  <script src="../assets/js/courses.js" defer></script>
-</body></html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Courses — Sahariyar Ahamad</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script defer src="../assets/js/theme.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .hero {
+            padding: 80px 0 45px
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1;
+            letter-spacing: -.055em;
+            margin: 0 0 18px
+        }
+
+        .hero p {
+            max-width: 720px;
+            color: var(--muted);
+            font-size: 1.05rem
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-bottom: 110px
+        }
+
+        .card {
+            display: block;
+            padding: 28px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: .25s
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--accent)
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 18px
+        }
+
+        .card h2 {
+            margin: 0 0 8px
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted)
+        }
+
+        .count {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 5px 9px;
+            border-radius: 8px;
+            background: var(--surface2);
+            color: var(--muted);
+            font-size: .72rem;
+            font-weight: 800
+        }
+
+        @media(max-width:850px) {
+            .grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(max-width:550px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="container nav-wrap">
+
+        <a class="brand" href="../">
+            Sahariyar Ahamad<span>.</span>
+        </a>
+
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+        >
+            ☰
+        </button>
+
+
+        <nav
+            id="mainNav"
+            class="main-nav"
+        >
+
+            <a href="../#about">
+                About
+            </a>
+
+            <a  href="../projects/">
+                Projects
+            </a>
+
+            <a href="../blogs/">
+                Blogs
+            </a>
+
+            <a href="../docs/">
+                Docs
+            </a>
+
+            <a class="active" href="./">
+              Courses
+            </a>
+
+            <a href="../#contact">
+                Contact
+            </a>
+
+
+            <button
+                class="theme-btn"
+                id="themeBtn"
+                type="button"
+            >
+                ◐
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+    <main class="container">
+        <section class="hero">
+            <p class="eyebrow">Learning platform</p>
+            <h1>Courses</h1>
+            <p>Practical courses for programming, Android development and technology skills.</p>
+        </section>
+
+        <section class="grid">
+            <a class="card" href="./crash-courses/">
+                <div class="icon">💻</div>
+                <h2>Crush Courses</h2>
+                <p>Crash courses that help you to upgrade your skill.</p><span
+                    class="count">1 course</span>
+            </a>
+            
+        </section>
+
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner"><span>© 2026 Sahariyar Ahamad</span><a href="../">Home</a></div>
+    </footer>
+    <script>document.getElementById("menuBtn")?.addEventListener("click", () => document.getElementById("mainNav")?.classList.toggle("open"));</script>
+</body>
+
+</html>
